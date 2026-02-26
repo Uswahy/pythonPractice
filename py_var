@@ -1,0 +1,66 @@
+# Interactive Python Variables & Data Types Demo
+
+
+print("Welcome to the Interactive Python Data Types Demo!")
+
+# 1️⃣ Integer input
+age = int(input("Enter your age (integer): "))
+print("You entered:", age, "Type:", type(age))
+
+# 2️⃣ Float input
+height = float(input("Enter your height in meters (float): "))
+print("You entered:", height, "Type:", type(height))
+
+# 3️⃣ String input
+name = input("Enter your name (string): ")
+print("Hello", name, "! Type:", type(name))
+
+# 4️⃣ Boolean (simple yes/no)
+student_input = input("Are you a student? (yes/no): ").lower()
+is_student = True if student_input == "yes" else False
+print("Boolean value:", is_student, "Type:", type(is_student))
+
+# 5️⃣ List (multiple inputs)
+fruits = input("Enter your favorite fruits (comma separated): ").split(",")
+print("Your List:", fruits, "Type:", type(fruits))
+
+# 6️⃣ Tuple (immutable example)
+colors = ("red", "green", "blue")
+print("Tuple (fixed colors):", colors, "Type:", type(colors))
+
+# 7️⃣ Set (unique values)
+numbers = input("Enter some numbers (comma separated, duplicates allowed): ").split(",")
+numbers_set = set(numbers)
+print("Set (unique numbers):", numbers_set, "Type:", type(numbers_set))
+
+# 8️⃣ Dictionary (key-value example)
+student = {
+    "name": name,
+    "age": age,
+    "height": height
+}
+print("Dictionary:", student, "Type:", type(student))
+print("Access name from dictionary:", student["name"])
+
+# 9️⃣ Complex number
+complex_num = complex(int(input("Enter real part of a complex number: ")),
+                      int(input("Enter imaginary part of a complex number: ")))
+print("Complex Number:", complex_num, "Type:", type(complex_num))
+
+# 1️⃣0️⃣ NoneType example
+nothing = None
+print("NoneType variable:", nothing, "Type:", type(nothing))
+
+# 1️⃣1️⃣ Type conversion demo
+age_str = str(age)
+print("Convert Integer to String:", age_str, "Type:", type(age_str))
+
+height_int = int(height)
+print("Convert Float to Integer:", height_int, "Type:", type(height_int))
+
+# 1️⃣2️⃣ Operations
+total_age = age + 5  # adding 5 just for demo
+print("Age + 5 =", total_age)
+
+is_adult = age >= 18
+print("Are you adult? ->", is_adult)
